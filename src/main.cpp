@@ -1,30 +1,10 @@
-import events;
-import window;
-import callstack;
-import std.core;
+#include <iostream>
+#include <thread>
+#include "util/events.h"
+#include "app/window.h"
+#include "util/callstack.h"
 
-#include "macros.h"
-
-class Foo : public EventListener
-{
-    float m_accumulator{ 0 };
-public:
-    void render_frame(float dt)
-    {
-        m_accumulator += dt;
-        std::cout << "frame " << dt << std::endl;
-    }
-    virtual ~Foo()
-    {
-
-    }
-};
-
-class Texture
-{
-
-};
-
+using namespace omix;
 
 void recu1();
 
@@ -35,7 +15,7 @@ void recu0()
     if (_entered)
     {
         std::cout << "already set\n";
-        std::cout << CallStack::dump();
+        std::cout << CallStack::Dump();
         return;
     }
     LoopGuard _loop_guard(_entered);
@@ -53,19 +33,12 @@ void recu1()
 int main()
 {
     CALL_STACK;
-    recu1();
-    auto t = std::thread([]() {
-        recu1();
-    });
-    t.join();
+    auto wgl = WindowFactory::Create(800, 600, Graphics::API::OpenGL_33);
+    auto wdx = WindowFactory::Create(800, 600, Graphics::API::Direct3D_11);
 
-    auto w = WindowFactory::create(800, 600, Graphics::API::OpenGL_33);
-
-    Foo foo; 
     RenderLoop loop;
-    auto f = std::make_shared<Foo>();
-    loop.on_render.add(*f, &Foo::render_frame);
-    loop.run();
+    loop.on_render.Add([](float) { std::cout << "lambda dt\n"; });
+    loop.Run();
 
     return 0;
 }

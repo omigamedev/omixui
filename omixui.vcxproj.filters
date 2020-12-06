@@ -5,30 +5,85 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\gfx">
+      <UniqueIdentifier>{16a00a2f-c509-4a53-bc6d-1c090114c3a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gfx\gl33">
+      <UniqueIdentifier>{397d8845-66d7-4dce-a01c-dbad0a80ee69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\app">
+      <UniqueIdentifier>{36049ae0-c2b8-44d7-a84e-a2fadbeb8855}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{e5947ea8-445e-48ae-9832-b0f141621a11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gfx\dx11">
+      <UniqueIdentifier>{4331e9eb-4cbf-4235-826e-402c9ec84cb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gfx\vk">
+      <UniqueIdentifier>{548d8fd0-91d8-4846-8def-084db9b463a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\app\win">
+      <UniqueIdentifier>{6399d846-f754-4251-98d9-cfd27fb5f8da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gfx\gl33\win">
+      <UniqueIdentifier>{05da9729-cade-4c66-aede-2f7e44a7c2e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\window.ixx">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\graphics.ixx">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\gfx\graphics.cpp">
+      <Filter>Source Files\gfx</Filter>
     </ClCompile>
-    <ClCompile Include="src\events.ixx">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\gfx\gl33\gl33.cpp">
+      <Filter>Source Files\gfx\gl33</Filter>
     </ClCompile>
-    <ClCompile Include="src\callstack.ixx">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="src\app\window.cpp">
+      <Filter>Source Files\app</Filter>
     </ClCompile>
+    <ClCompile Include="src\util\events.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\callstack.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\app\win\window.win.cpp">
+      <Filter>Source Files\app\win</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gfx\gl33\win\gl33.win.cpp">
+      <Filter>Source Files\gfx\gl33\win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\config.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\graphics.h">
+      <Filter>Source Files\gfx</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\gl33\gl33.h">
+      <Filter>Source Files\gfx\gl33</Filter>
+    </ClInclude>
+    <ClInclude Include="src\app\window.h">
+      <Filter>Source Files\app</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\callstack.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\util\events.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\app\win\window.win.h">
+      <Filter>Source Files\app\win</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gfx\gl33\win\gl33.win.h">
+      <Filter>Source Files\gfx\gl33\win</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

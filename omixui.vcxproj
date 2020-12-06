@@ -10,6 +10,26 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\app\win\window.win.cpp" />
+    <ClCompile Include="src\app\window.cpp" />
+    <ClCompile Include="src\gfx\gl33\gl33.cpp" />
+    <ClCompile Include="src\gfx\gl33\win\gl33.win.cpp" />
+    <ClCompile Include="src\gfx\graphics.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\util\callstack.cpp" />
+    <ClCompile Include="src\util\events.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\app\win\window.win.h" />
+    <ClInclude Include="src\app\window.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\gfx\gl33\gl33.h" />
+    <ClInclude Include="src\gfx\gl33\win\gl33.win.h" />
+    <ClInclude Include="src\gfx\graphics.h" />
+    <ClInclude Include="src\util\callstack.h" />
+    <ClInclude Include="src\util\events.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -56,8 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <EnableModules>true</EnableModules>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -73,8 +92,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpplatest</LanguageStandard>
-      <EnableModules>true</EnableModules>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -84,13 +102,6 @@
       <AdditionalDependencies>opengl32.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="src\callstack.ixx" />
-    <ClCompile Include="src\events.ixx" />
-    <ClCompile Include="src\graphics.ixx" />
-    <ClCompile Include="src\main.cpp" />
-    <ClCompile Include="src\window.ixx" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
